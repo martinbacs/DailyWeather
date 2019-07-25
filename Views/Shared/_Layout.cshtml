@@ -12,6 +12,7 @@
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
                   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
                   crossorigin="" />
+
         </environment>
         <environment exclude="Development">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -38,6 +39,8 @@
                         <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                         <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                         <li><a asp-area="" asp-controller="Rainfall" asp-action="Rainfall">Rainfall</a></li>
+                        <li><a asp-area="" asp-controller="Forecast" asp-action="Index">Forecast</a></li>
+                       
 
                     </ul>
                 </div>
@@ -62,7 +65,8 @@
             <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
                     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
                     crossorigin=""></script>
-
+            @* canvasJS chart *@
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
             <script src="~/js/site.js" asp-append-version="true"></script>
 
         </environment>

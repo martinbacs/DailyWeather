@@ -10,7 +10,7 @@ namespace DailyWeather.Controllers
         public static void InitializeClient()
         {
             APIClient = new HttpClient();
-            APIClient.BaseAddress = new Uri("https://opendata-download-metobs.smhi.se");
+            //APIClient.BaseAddress = new Uri("https://opendata-download-metobs.smhi.se");
             APIClient.DefaultRequestHeaders.Accept.Clear();
             APIClient.DefaultRequestHeaders.Accept.Add(
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));

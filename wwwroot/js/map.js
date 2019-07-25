@@ -1,9 +1,8 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿
+// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-
-
     var southWest = L.latLng(52.500440,2.250475);
     var northEast = L.latLng(70.742227,37.934697);
 bounds = L.latLngBounds(southWest, northEast);
@@ -40,6 +39,7 @@ function onMapClick(e) {
 }
 
 mymap.on('click', onMapClick);
+
 
 /*
 function load() {

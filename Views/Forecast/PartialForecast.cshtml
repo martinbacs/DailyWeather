@@ -1,0 +1,22 @@
+﻿
+@model ForecastModel
+@{
+
+    ViewData["Title"] = "Forecast";
+
+}
+<p>Rainfall Forecast View</p>
+
+@foreach (TimeSerie timeSerie in Model.TimeSeries){
+    @timeSerie.ValidTime
+    <br/>
+    foreach(Parameter param in timeSerie.Parameters){
+        @param.Name;
+    <br />
+        foreach(Double d in param.Values){
+            @d
+    <br />
+        }
+    }
+    
+}

@@ -24,18 +24,23 @@ namespace DailyWeather.Controllers
         public IActionResult Rainfall()
         {
             RainfallModel result = ProcessRainfallForStation().Result;
-
             return View(result);
         }
 
         public async Task<RainfallModel> ProcessRainfallForStation()
         {
             var serializer = new DataContractJsonSerializer(typeof(RainfallModel));
-            var streamTask = ApiHelper.APIClient.GetStreamAsync("/api/version/1.0/parameter/23/station/53430/period/latest-months/data.json");
+            var streamTask = ApiHelper.APIClient.GetStreamAsync("https://opendata-download-metobs.smhi.se/api/version/1.0/parameter/23/station/53430/period/latest-months/data.json");
             var result = serializer.ReadObject(await streamTask) as RainfallModel;
 
+            String s = Request.Headers["X-requested-With"];
+            if(Request.Headers["X-requested-With"] == "XMLHttpRequest")
+            {
+
+            }
 
             return result;
         }
+
     }
 }
